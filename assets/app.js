@@ -1,52 +1,19 @@
 import Vue from 'vue'
-import {
-  Vuetify,
-  VApp,
-  VNavigationDrawer,
-  VFooter,
-  VList,
-  VBtn,
-  VIcon,
-  VGrid,
-  VToolbar,
-  VCard,
-  transitions
-} from 'vuetify'
-import '../node_modules/vuetify/src/stylus/app.styl'
 import App from './App.vue'
 import Components from 'components/_index'
-
 import { createStore } from 'store/index'
 import { createRouter } from 'router/index'
 import { sync } from 'vuex-router-sync'
+import * as filters from '../util/filters'
 
-Vue.use(Vuetify, {
-  components: {
-    VApp,
-    VNavigationDrawer,
-    VFooter,
-    VList,
-    VBtn,
-    VIcon,
-    VGrid,
-    VToolbar,
-    VCard,
-    transitions
-  },
-  theme: {
-    primary: '#ee44aa',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
-  }
-})
+// register global utility filters.
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+});
 
 Object.keys(Components).forEach(key => {
   Vue.component(key, Components[key])
-})
+});
 
 // Expose a factory function that creates a fresh set of store, router,
 // app instances on each call (which is called for each SSR request)
