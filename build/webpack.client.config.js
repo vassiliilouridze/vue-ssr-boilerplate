@@ -8,6 +8,11 @@ const config = merge(base, {
   entry: {
     app: './src/entry-server.js'
   },
+  resolve: {
+    alias: {
+      'create-api': './create-api-client.js'
+    }
+  },
   plugins: [
     // strip dev-only code in Vue source
     new webpack.DefinePlugin({
