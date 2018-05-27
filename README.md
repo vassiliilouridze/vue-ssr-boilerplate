@@ -1,19 +1,38 @@
-# Vuetify Webpack SSR Template
+# Vue Webpack SSR Template with server caching
 
-> Vuetify SSR Webpack Template
+> Vue Webpack SSR Template with server caching
 
-## Build Setup
+Vue 2.0 + vue-router + vuex, with server-side rendering.
+
+## Features
+
+- Server Side Rendering
+  - Vue + vue-router + vuex working together
+  - Server-side data pre-fetching
+  - Client-side state & DOM hydration
+  - Automatically inlines CSS used by rendered components only
+  - Preload / prefetch resource hints
+  - Route-level code splitting
+- Single-file Vue Components
+  - Hot-reload in development
+  - CSS extraction for production
+
+**A detailed Vue SSR guide can be found [here](https://ssr.vuejs.org).**
+
+## Build Setup Dev Mode
+
+**Requires Node.js 7+**
 
 ``` bash
-vue init vuetifyjs/webpack-ssr
+# install dependencies
+npm install # or yarn
 
-cd webpack-ssr
+# serve in dev mode, with hot reload at localhost:8080
+npm run dev
 
-# npm
-npm install
+# build for production
+npm run build
 
-# yarn
-yarn
+# serve in production mode
+npm start
 ```
-
-For additional information, please visit the [Official Documentation](https://vuetifyjs.com).
