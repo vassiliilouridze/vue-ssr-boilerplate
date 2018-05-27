@@ -6,7 +6,7 @@ const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 
 const config = merge(base, {
   entry: {
-    app: './assets/entry-client.js'
+    app: './src/entry-server.js'
   },
   plugins: [
     // strip dev-only code in Vue source

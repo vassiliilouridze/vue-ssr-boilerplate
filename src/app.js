@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
-import Components from 'components/_index'
-import { createStore } from 'store/index'
-import { createRouter } from 'router/index'
+import Components from './components/_index'
+import { createStore } from './store/index'
+import { createRouter } from './router/index'
 import { sync } from 'vuex-router-sync'
-import * as filters from '../util/filters'
+import * as filters from './util/filters'
 
 // register global utility filters.
 Object.keys(filters).forEach(key => {

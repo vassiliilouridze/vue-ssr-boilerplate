@@ -7,7 +7,7 @@ const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 module.exports = merge(base, {
   target: 'node',
   devtool: '#source-map',
-  entry: './assets/entry-server.js',
+  entry: './src/entry-server.js',
   output: {
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2'
@@ -16,7 +16,7 @@ module.exports = merge(base, {
   // https://github.com/liady/webpack-node-externals
   externals: nodeExternals({
     // do not externalize CSS files in case we need to import it from a dep
-    whitelist: [/\.css$/, /vuetify/]
+    whitelist: [/\.css$/]
   }),
   plugins: [
     new webpack.DefinePlugin({
