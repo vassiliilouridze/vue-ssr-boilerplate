@@ -1,7 +1,7 @@
 {
   "/": {
-    "title": "Vue.js 2 Material Component Framework",
-    "description": "My Vuetify.js Project",
+    "title": "Vue.js 2 SSR & server side caching with wp & Firebase",
+    "description": "My SSR boilerplate",
     "keywords": "vue 2.0, vuetify"
   },
   "/inspire": {
